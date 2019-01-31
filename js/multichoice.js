@@ -218,6 +218,12 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           self.setVideo(params.media);
         }
       }
+      else if (type === 'H5P.Audio') {
+        if (params.media.params) {
+          // Register task audio
+          self.setAudio(params.media);
+        }
+      }
     }
 
     // Determine if we're using checkboxes or radio buttons
